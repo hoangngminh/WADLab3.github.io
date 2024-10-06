@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --border-color: #dee2e6;
+            --link-color: #007bff;
+            --bg-light: #f8f9fa;
+        }
+
+        .dark-mode {
+            --bg-color: #212529;
+            --text-color: #f8f9fa;
+            --border-color: #495057;
+            --link-color: #6ea8fe;
+            --bg-light: #343a40;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .content-wrapper {
+            width: fit-content;
+        }
+
+        .border {
+            border-color: var(--border-color) !important;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light) !important;
+        }
+
+        .text-muted, .text-secondary {
+            color: var(--text-color) !important;
+            opacity: 0.7;
+        }
+
+        a.nav-link, a.text-primary {
+            color: var(--link-color) !important;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .next-button {
+            background-color: var(--button-bg);
+            color: var(--button-color);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .next-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="container my-5">
+        <div class="content-wrapper">
+            <section class="mb-4 p-4 border rounded">
+                <div class="text-center">
+                    <div class="profile-img mb-3"></div>
+                    <h1>Your Name</h1>
+                    <nav class="nav justify-content-center">
+                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="#">Articles</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </nav>
+                    <h1>Frontend Developer</h1>
+                    <p class="text-muted">HTML only with proper layout, no styling</p>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="mb-4 p-4 border rounded">
+                <h3>Projects</h3>
+                <ul class="list-unstyled">
+                    <li class="p-2 bg-light mb-2 rounded">HTML Only Portfolio</li>
+                    <li class="p-2 bg-light mb-2 rounded">Calculator</li>
+                    <li class="p-2 bg-light mb-2 rounded">Quiz App</li>
+                    <li class="p-2 bg-light mb-2 rounded">Countdown Timer</li>
+                    <li class="p-2 bg-light mb-2 rounded">Product Upcoming Page</li>
+                </ul>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section class="mb-4 p-4 border rounded">
+                <h3>Work Experience</h3>
+                <div class="experience-item">
+                    <h4>roadmap.sh</h4>
+                    <p>Solved all the frontend projects</p>
+                    <a class="text-primary" href="#">Visit my Profile</a>
+
+                    <h4>OpenSource Work</h4>
+                    <p>Contributed to 50 opensource projects. Made my own projects with 200 Github Stars</p>
+                    <a class="text-primary" href="#">Visit my GitHub</a>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="mb-4 p-4 border rounded">
+                <h3>Education</h3>
+                <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+                <ul class="list-unstyled">
+                    <li class="p-2 bg-light mb-2 rounded">Object Oriented Programming</li>
+                    <li class="p-2 bg-light mb-2 rounded">Data Structures and Algorithms</li>
+                    <li class="p-2 bg-light mb-2 rounded">Web Engineering</li>
+                    <li class="p-2 bg-light mb-2 rounded">Artificial Intelligence</li>
+                    <li class="p-2 bg-light mb-2 rounded">Human Computer Interaction</li>
+                    <li class="p-2 bg-light mb-2 rounded">Computer Graphics</li>
+                    <li class="p-2 bg-light mb-2 rounded">Database Management Systems</li>
+                    <li class="p-2 bg-light mb-2 rounded">Distributed Database Systems</li>
+                    <li class="p-2 bg-light mb-2 rounded">Discrete Mathematics</li>
+                </ul>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="p-4 border rounded">
+                <h3>Reviews from my Teachers</h3>
+                <blockquote class="blockquote">
+                    "John Doe was a brilliant student; always stood out with his assignments."
+                </blockquote>
+                <footer class="blockquote-footer">
+                    <strong>Jane Doe</strong>, Assistant Professor
+                </footer>
+
+                <p class="text-center py-4">&copy; all rights reserved 2025</p>
+            </section>
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="next-button" onclick="goToNextPage()">Next</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+
+        function goToNextPage() {
+            // Add your navigation logic here
+            window.location.href = 'new.html';
+        }
+    </script>
+</body>
+</html>
